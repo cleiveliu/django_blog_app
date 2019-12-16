@@ -13,7 +13,7 @@ django-ckeditor = "*"
 django-cleanup = "*"
 django-crispy-forms = "*"
 django-js-asset = "*"
-django = "==2.2.7"
+django = "==2.2.8"
 
 [requires]
 python_version = "3.7"
