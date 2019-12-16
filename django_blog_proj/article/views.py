@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
-def article(request):
+def articles(request):
 
     keyword = request.GET.get("keyword")
 
