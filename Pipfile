@@ -10,6 +10,10 @@ django = "*"
 pylint = "*"
 black = "*"
 pipenv = "*"
+django-ckeditor = "*"
+django-cleanup = "*"
+django-crispy-forms = "*"
+django-js-asset = "*"
 
 [requires]
 python_version = "3.7"
