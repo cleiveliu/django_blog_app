@@ -49,6 +49,8 @@ def add_article(request):
 
 def detail(request, id):
     article = get_list_or_404(Article, id=id)
+    if article:
+        article = article[0]
     comments = article.comments.all()
     context = {"article": article, "comments": comments}
 
