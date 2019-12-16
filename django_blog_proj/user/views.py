@@ -10,15 +10,15 @@ from django.contrib.auth import login, authenticate, logout
 def register_user(request):
     form = RegisterForm(request.POST or None)
     if form.is_valid():
-        usename = form.cleaned_data.get("username")
+        username = form.cleaned_data.get("username")
         password = form.cleaned_data.get("password")
 
-        new_user = User(usename=usename)
+        new_user = User(username=username)
         new_user.set_password(password)
 
         new_user.save()
         login(request, new_user)
-        messages.info("您已成功注册")
+        messages.info(request, "您已成功注册")
 
         return redirect("index")
     context = {"form": form}

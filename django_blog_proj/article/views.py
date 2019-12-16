@@ -27,7 +27,7 @@ def about(request):
 
 @login_required(login_url="user:login")
 def dashboard(request):
-    articles = Article.objects.filter(auth=request.user)
+    articles = Article.objects.filter(author=request.user)
     context = {"articles": articles}
     return render(request, "dashboard.html", context)
 
@@ -44,7 +44,7 @@ def add_article(request):
 
         messages.success(request, "文章创建成功")
         return redirect("article:dashboard")
-    return render(request, "articles.html", {"form": form})
+    return render(request, "addarticle.html", {"form": form})
 
 
 def detail(request, id):

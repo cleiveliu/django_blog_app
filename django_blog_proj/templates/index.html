@@ -1,0 +1,18 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="jumbotron text-center">
+  <h3>Here you are!</h3>
+  <p>
+    作为此博客的开发人员，您可以共享您的博客文章和 你可以帮助别人。
+  </p>
+</div>
+
+<p>
+  {% if request.user.is_authenticated %} 
+  已登陆, 
+  {{request.user.username}}
+  {% else %}
+  尚未登陆 
+  {% endif %}
+</p>
+{% endblock body %}

@@ -6,7 +6,6 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
 pylint = "*"
 black = "*"
 pipenv = "*"
@@ -14,6 +13,7 @@ django-ckeditor = "*"
 django-cleanup = "*"
 django-crispy-forms = "*"
 django-js-asset = "*"
+django = "==2.2.7"
 
 [requires]
 python_version = "3.7"
