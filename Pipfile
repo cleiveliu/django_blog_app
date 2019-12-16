@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 pylint = "*"
 black = "*"
+pipenv = "*"
 
 [requires]
 python_version = "3.7"
