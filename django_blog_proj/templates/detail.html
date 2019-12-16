@@ -12,7 +12,7 @@
       <!-- Author -->
       <p class="lead">
         
-        {{article.author.username}} tarafından yayınlandı
+        {{article.author.username}} author
       </p>
 
       <hr>
@@ -37,7 +37,7 @@
 
       <hr>
 
-      <h4>Yorumlar</h4>
+      <h4>comments</h4>
       <hr>
       {% if comments %}
       {% for comment in comments  %}
@@ -54,24 +54,24 @@
       
       {% else %}
       <div class ="alert alert-danger">
-        Bu makaleye herhangi bir yorum yazılmamış,ilk yorum yapan siz olun!
+        成为第一个发表评论的人！
       </div>
       {% endif %}
 
       <div class="card my-4">
-          <h5 class="card-header">Yorum Ekle:</h5>
+          <h5 class="card-header">添加评论:</h5>
           <div class="card-body">
             <form method = "post" action = "{% url 'article:comment' article.id %}">
               {% csrf_token %}
               <div class="form-group">
-                  <label for="formGroupExampleInput">İsim</label>
-                  <input name = "comment_author" type="text" class="form-control" id="formGroupExampleInput" placeholder="İsminizi girin">
+                  <label for="formGroupExampleInput">姓名</label>
+                  <input name = "comment_author" type="text" class="form-control" id="formGroupExampleInput" placeholder="输入你的名字">
                 </div>
               <div class="form-group">
-                  <label for="formGroupExampleInput">Yorum</label>
+                  <label for="formGroupExampleInput">评论</label>
                 <textarea name = "comment_content" class="form-control" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-danger">Ekle</button>
+              <button type="submit" class="btn btn-danger">添加</button>
             </form>
           </div>
         </div>
